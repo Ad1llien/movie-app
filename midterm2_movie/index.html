@@ -7,66 +7,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="start-screen">
-    <div class="welcome">
-      <h1>Welcome!</h1>
-      <button id="start-button">Start</button>
-    </div>
-    <video  autoplay loop muted plays-inline class="back-video" type="video/mp4" src="/hacker wallpaper video download.mp4"></video>
-  </div>
+  <header>
+    <input type="text" id="search-input" placeholder="Search for movies...">
+    <div id="suggestions" class="hidden"></div>
+    <select id="sort-select">
+      <option value="popularity.desc">Popularity</option>
+      <option value="release_date.desc">Release Date</option>
+      <option value="vote_average.desc">Rating</option>
+    </select>
+  </header>
 
-  <div id="layout" class="hidden">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">HOME</a></li>
-          <li><a href="">INTERESTING</a></li>
-          <li><a href="">HOT SEARCHES</a></li>
-          <li><a href="">CONTACT US</a></li>
-        </ul>
-        <form id="form">
-          <input type="text" placeholder="search..." id="search">
-          <div class="suggestions">
-            
-          </div>
-        </form>
-      </nav>
-    </header>
-    <div id="genre" class="hidden">
-      <div class="filter">Comedy</div>
-      <div class="filter">Drama</div>
-      <div class="filter">BlockBuster</div>
-      <div class="filter">Horror</div>
+  <!-- Genre Filter Container -->
+  <div id="genre-container" class="genre-container"></div>
+
+
+
+  <main>
+    <div id="movies-grid"></div>
+
+    <div class="pagination">
+        <div class="page" id="prev">Previous</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next</div>
     </div>
-      <main id="main">
-        <div class="movie">
-          <img src="/973e73fd950ad7dbf034be539003db6f.jpg" alt="image">
-          <div class="movie-info">
-            <h3>Movie Title</h3>
-            <span class="green">9.8</span>
-            </div>
-            <div class="overview">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Officiis id blanditiis aliquam doloribus ipsa reprehenderit? 
-              Id commodi repudiandae facilis cupiditate delectus est perspiciatis 
-              tempore placeat natus, asperiores illum eveniet odit!
-            </div>
-        </div>
-        <div class="movie">
-          <img src="/973e73fd950ad7dbf034be539003db6f.jpg" alt="image">
-          <div class="movie-info">
-            <h3>Movie Title</h3>
-            <span class="green">9.8</span>
-          </div>
-          <div class="overview">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Officiis id blanditiis aliquam doloribus ipsa reprehenderit? 
-            Id commodi repudiandae facilis cupiditate delectus est perspiciatis 
-            tempore placeat natus, asperiores illum eveniet odit!
-          </div>
-        </div>
-    </div>
+    <h2>Your Watchlist</h2>
+    <div id="watchlist-grid"></div>
   </main>
+
   <script src="script.js"></script>
+
 </body>
 </html>
